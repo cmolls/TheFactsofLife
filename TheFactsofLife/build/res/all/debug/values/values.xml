@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- From: C:\Users\mcollins\AndroidStudioProjects\TheFactsofLifeProject\TheFactsofLife\src\main\res\values\arrays.xml -->
+    <array name="factlist">
+        <item>July 14th is Bastille Day.</item>
+        <item>In accordance with U.S. laws, a beer commercial can never show a person actually drinking beer.</item>
+        <item>A toaster uses almost half as much energy as a full-sized oven.</item>
+        <item>Buttermilk does not contain any butter.</item>
+        <item>You cannot buy alcohol after 9pm in Connecticut.</item>
+        <item>El Salvador is the only Central American country without a coastline on the Caribbean.</item>
+        <item>Istanbul, Turkey is the only city in the world located on two continents.</item>
+    </array>
     <!-- From: C:\Users\mcollins\AndroidStudioProjects\TheFactsofLifeProject\TheFactsofLife\src\main\res\values\dimens.xml -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <!-- From: C:\Users\mcollins\AndroidStudioProjects\TheFactsofLifeProject\TheFactsofLife\src\main\res\values\strings.xml -->
     <string name="action_settings">Settings</string>
     <string name="app_name">The Facts of Life</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Oops, no tips today.</string>
     <!-- From: C:\Users\mcollins\AndroidStudioProjects\TheFactsofLifeProject\TheFactsofLife\src\main\res\values\styles.xml -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

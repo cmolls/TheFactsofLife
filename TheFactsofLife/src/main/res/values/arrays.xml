@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array
+        name="factlist">
+        <item>July 14th is Bastille Day.</item>
+        <item>In accordance with U.S. laws, a beer commercial can never show a person actually drinking beer.</item>
+        <item>A toaster uses almost half as much energy as a full-sized oven.</item>
+        <item>Buttermilk does not contain any butter.</item>
+        <item>You cannot buy alcohol after 9pm in Connecticut.</item>
+        <item>El Salvador is the only Central American country without a coastline on the Caribbean.</item>
+        <item>Istanbul, Turkey is the only city in the world located on two continents.</item>
+        </array>
+</resources>
