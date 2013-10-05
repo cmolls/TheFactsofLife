@@ -4,20 +4,37 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
 import android.widget.TextView;
 
 public class TodaysFact extends Activity {
+
+    private int factNumber;
+    private String[] listOfFacts;
+    private TextView fact;
+    private SharedPreferences sharedPreferences;
 
     //todo: prevent incrementation on rotation
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SharedPreferences sharedPreferences = getSharedPreferences("TheFactsOfLife", MODE_PRIVATE);
-        int factNumber = sharedPreferences.getInt("factNumber", 0);
+        sharedPreferences = getSharedPreferences("TheFactsOfLife", MODE_PRIVATE);
+        factNumber = sharedPreferences.getInt("factNumber", 0);
 
-        setContentView(R.layout.activity_todaysfact);
-        String[] listOfFacts = getResources().getStringArray(R.array.factlist);
-        TextView fact = (TextView) findViewById(R.id.tv_list_of_facts);
+        this.setContentView(R.layout.activity_todaysfact);
+
+        listOfFacts = getResources().getStringArray(R.array.factlist);
+        fact = (TextView) findViewById(R.id.tv_list_of_facts);
+        nextTip();
+        fact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nextTip();
+            }
+        });
+    }
+
+    private void nextTip(){
         if(factNumber >= listOfFacts.length) factNumber = 0;
         fact.setText(listOfFacts[factNumber]);
         factNumber = factNumber + 1;
