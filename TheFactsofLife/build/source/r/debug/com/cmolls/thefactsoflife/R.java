@@ -9,15 +9,15 @@ package com.cmolls.thefactsoflife;
 
 public final class R {
     public static final class array {
-        /**  From: C:\Users\mcollins\AndroidStudioProjects\TheFactsofLifeProject\TheFactsofLife\src\main\res\values\arrays.xml 
+        /**  From: file:/Users/Marilyn/AndroidStudioProjects/TheFactsofLife/TheFactsofLife/src/main/res/values/arrays.xml 
          */
         public static final int factlist=0x7f040000;
     }
     public static final class attr {
     }
     public static final class dimen {
-        /**  From: C:\Users\mcollins\AndroidStudioProjects\TheFactsofLifeProject\TheFactsofLife\src\main\res\values\dimens.xml 
- From: C:\Users\mcollins\AndroidStudioProjects\TheFactsofLifeProject\TheFactsofLife\src\main\res\values-sw720dp-land\dimens.xml 
+        /**  From: file:/Users/Marilyn/AndroidStudioProjects/TheFactsofLife/TheFactsofLife/src/main/res/values/dimens.xml 
+ From: file:/Users/Marilyn/AndroidStudioProjects/TheFactsofLife/TheFactsofLife/src/main/res/values-sw720dp-land/dimens.xml 
          */
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
@@ -36,20 +36,20 @@ public final class R {
         public static final int todays_fact=0x7f080000;
     }
     public static final class string {
-        /**  From: C:\Users\mcollins\AndroidStudioProjects\TheFactsofLifeProject\TheFactsofLife\src\main\res\values\strings.xml 
+        /**  From: file:/Users/Marilyn/AndroidStudioProjects/TheFactsofLife/TheFactsofLife/src/main/res/values/strings.xml 
          */
         public static final int action_settings=0x7f060000;
         public static final int app_name=0x7f060001;
         public static final int hello_world=0x7f060002;
     }
     public static final class style {
-        /**  From: C:\Users\mcollins\AndroidStudioProjects\TheFactsofLifeProject\TheFactsofLife\src\main\res\values\styles.xml 
+        /**  From: file:/Users/Marilyn/AndroidStudioProjects/TheFactsofLife/TheFactsofLife/src/main/res/values/styles.xml 
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         
- From: C:\Users\mcollins\AndroidStudioProjects\TheFactsofLifeProject\TheFactsofLife\src\main\res\values-v11\styles.xml 
+ From: file:/Users/Marilyn/AndroidStudioProjects/TheFactsofLife/TheFactsofLife/src/main/res/values-v11/styles.xml 
  API 11 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f070000;
