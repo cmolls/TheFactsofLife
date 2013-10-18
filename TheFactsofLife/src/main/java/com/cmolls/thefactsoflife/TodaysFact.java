@@ -1,11 +1,17 @@
 package com.cmolls.thefactsoflife;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
+
+import java.util.Calendar;
 
 public class TodaysFact extends Activity {
 
@@ -20,6 +26,19 @@ public class TodaysFact extends Activity {
         super.onCreate(savedInstanceState);
         sharedPreferences = getSharedPreferences("TheFactsOfLife", MODE_PRIVATE);
         factNumber = sharedPreferences.getInt("factNumber", 0);
+
+        Intent intent = new Intent(NotificationService.ACTION_NOTIFY);
+        Calendar date=Calendar.getInstance();
+        date.add(Calendar.SECOND, 20);
+        AlarmManager am = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+        startService(intent);
+        PendingIntent pi = PendingIntent.getService(this, 1, intent, PendingIntent.FLAG_NO_CREATE);
+        if (pi == null)
+        {
+            pi = PendingIntent.getService(this, 1, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+            am.setRepeating(AlarmManager.RTC, date.getTimeInMillis(), 1000 * 20, pi);
+        }
+
 
         this.setContentView(R.layout.activity_todaysfact);
 
