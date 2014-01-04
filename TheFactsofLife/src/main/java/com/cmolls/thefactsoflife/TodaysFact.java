@@ -36,6 +36,7 @@ public class TodaysFact extends Activity {
         date.set(Calendar.MINUTE, 00);
         date.set(Calendar.SECOND, 00);
         AlarmManager am = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+        /////TODO Remove after testing
         startService(intent);
         PendingIntent pi = PendingIntent.getService(this, 1, intent, PendingIntent.FLAG_NO_CREATE);
         if (pi == null)
