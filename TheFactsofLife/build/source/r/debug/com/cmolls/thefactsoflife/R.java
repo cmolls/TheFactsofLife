@@ -22,7 +22,8 @@ public final class R {
         public static final int ic_stat_action_about=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090001;
+        public static final int action_settings=0x7f090002;
+        public static final int menu_item_share=0x7f090001;
         public static final int tv_list_of_facts=0x7f090000;
     }
     public static final class layout {
