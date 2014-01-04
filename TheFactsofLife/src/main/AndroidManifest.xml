@@ -28,7 +28,7 @@
                 <action android:name="com.cmolls.thefactsoflife.ACTION_NOTIFY"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
-            </service>
+        </service>
     </application>
 
 </manifest>
