@@ -2,6 +2,8 @@
 <resources>
 
     <!-- From: file:/Users/Marilyn/AndroidStudioProjects/TheFactsofLife/TheFactsofLife/src/main/res/values-sw720dp-land/dimens.xml -->
+    <eat-comment />
+
     <dimen name="activity_horizontal_margin">128dp</dimen>
 
 </resources>

@@ -29,14 +29,19 @@ public class TodaysFact extends Activity {
 
         Intent intent = new Intent(NotificationService.ACTION_NOTIFY);
         Calendar date=Calendar.getInstance();
-        date.add(Calendar.SECOND, 20);
+        if (date.get(Calendar.HOUR_OF_DAY) >= 17) {
+            date.add(Calendar.DATE, 1);
+        }
+        date.set(Calendar.HOUR_OF_DAY, 17);
+        date.set(Calendar.MINUTE, 00);
+        date.set(Calendar.SECOND, 00);
         AlarmManager am = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
         startService(intent);
         PendingIntent pi = PendingIntent.getService(this, 1, intent, PendingIntent.FLAG_NO_CREATE);
         if (pi == null)
         {
             pi = PendingIntent.getService(this, 1, intent, PendingIntent.FLAG_CANCEL_CURRENT);
-            am.setRepeating(AlarmManager.RTC, date.getTimeInMillis(), 1000 * 20, pi);
+            am.setRepeating(AlarmManager.RTC, date.getTimeInMillis(), 1000 * 60 * 60 * 24, pi);
         }
 
 
