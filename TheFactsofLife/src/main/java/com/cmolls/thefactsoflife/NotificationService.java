@@ -54,7 +54,7 @@ public class NotificationService extends IntentService {
         shareIntent.putExtra(Intent.EXTRA_TEXT, "Your friend wants to share a fact with you.\n\n" + todaysFact + "\n\nGet more facts at www.cmolls.com");
         shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Your friend has shared a fact with you.");
         shareIntent.setType("text/plain");
-        PendingIntent sharePendingIntent = PendingIntent.getActivity(this, 2, Intent.createChooser(shareIntent, "Share tip..."), PendingIntent.FLAG_CANCEL_CURRENT);
+        PendingIntent sharePendingIntent = PendingIntent.getActivity(this, 2, Intent.createChooser(shareIntent, "Share fact..."), PendingIntent.FLAG_CANCEL_CURRENT);
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(R.drawable.ic_stat_action_about)
