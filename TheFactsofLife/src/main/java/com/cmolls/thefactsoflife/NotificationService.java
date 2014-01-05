@@ -42,6 +42,12 @@ public class NotificationService extends IntentService {
         sharedPreferences = getSharedPreferences("TheFactsOfLife", MODE_PRIVATE);
         listOfFacts = getResources().getStringArray(R.array.factlist);
         factNumber = sharedPreferences.getInt("factNumber", 0);
+        //We actually want to show the next tip, the tip that is there after the Activity launches.
+        factNumber = factNumber + 1 < listOfFacts.length ? factNumber + 1 : 0;
+
+         //ternary operators strong var =  1 == 2 ? "yes" : "no"
+         //two equal signs means check value; one equal sign means assign value
+
         String todaysFact = listOfFacts[factNumber];
         Intent shareIntent = new Intent();
         shareIntent.setAction(Intent.ACTION_SEND);

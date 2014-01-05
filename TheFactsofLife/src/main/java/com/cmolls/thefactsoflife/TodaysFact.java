@@ -27,6 +27,7 @@ public class TodaysFact extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.setContentView(R.layout.activity_todaysfact);
         sharedPreferences = getSharedPreferences("TheFactsOfLife", MODE_PRIVATE);
         factNumber = sharedPreferences.getInt("factNumber", 0);
 
@@ -49,7 +50,6 @@ public class TodaysFact extends Activity {
         }
 
 
-        this.setContentView(R.layout.activity_todaysfact);
 
         listOfFacts = getResources().getStringArray(R.array.factlist);
         fact = (TextView) findViewById(R.id.tv_list_of_facts);
@@ -63,13 +63,14 @@ public class TodaysFact extends Activity {
     }
 
     private void nextTip(){
+        factNumber = factNumber + 1;
+        if(factNumber >= listOfFacts.length) factNumber = 0;
+
         String todaysFact = listOfFacts[factNumber];
         fact.setText(todaysFact);
 
         updateShareIntent(todaysFact);
 
-        factNumber = factNumber + 1;
-        if(factNumber >= listOfFacts.length) factNumber = 0;
         //chose to use apply, but commit could be more appropriate
         sharedPreferences.edit().putInt("factNumber", factNumber).apply();
     }
